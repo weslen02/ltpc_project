@@ -8,7 +8,7 @@ float valorCompra = 0.0;
 
 int main()
 {
-    //ponteiro para fazer alocação das strings
+    //ponteiro para fazer alocação das strings (O nome não pode ter mais que 9 chars quando digitado)
     char *nome[TAM];
     int codigo[TAM];
     float valorVenda[TAM];
@@ -16,7 +16,7 @@ int main()
 
     //contador para adicioanar dados
     for(i = 0 ; i < TAM; i++) {
-        nome[i] = malloc(sizeof(char)*4); //tratando string em C
+        nome[i] = malloc(sizeof(char)*20); //tratando string em C
         printf("Codigo .......................#%d: ", i+1), scanf("%d", &codigo[i]);
 		fflush(stdin); //limpa lixo na memória
         //não se usa o caractere & em strings em C
