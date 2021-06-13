@@ -8,7 +8,7 @@ float valorCompra = 0.0;
 
 int main()
 {
-    //ponteiro para fazer alocação das strings
+    //ponteiro para fazer alocaÃ§Ã£o das strings
     char *nome[TAM];
     int codigo[TAM];
     float valorVenda[TAM];
@@ -18,8 +18,8 @@ int main()
     for(i = 0 ; i < TAM; i++) {
         nome[i] = malloc(sizeof(char)*4); //tratando string em C
         printf("Codigo .......................#%d: ", i+1), scanf("%d", &codigo[i]);
-		fflush(stdin); //limpa lixo na memória
-        //não se usa o caractere & em strings em C
+		fflush(stdin); //limpa lixo na memÃ³ria
+        //nÃ£o se usa o caractere & em strings em C
 		printf("Nome ............................: "), scanf("%s", nome[i]);
 		fflush(stdin);
 		printf("Valor de compra .................: "), scanf("%f", &valorCompra);
@@ -30,7 +30,7 @@ int main()
             printf("\nTipos de produto = |1|2|3|4|5|6|\n");
             printf("Entre com o tipo do produto .....: "), scanf("%d", &n);
             fflush(stdin);
-            //if para as condiçoes do tipo de 1-6
+            //if para as condiÃ§oes do tipo de 1-6
             if(n > 0 && n < 7){
                 valorVenda[i] = tipoProd(n, valorCompra);
                 sair = 1;
@@ -61,42 +61,36 @@ int tipoProd (int n){
             ipi = (valorCompra * 0.1);
             icms = ( (valorCompra + ipi) * 0.12 );
             lucro = ( valorCompra * 0.2) * 0.05;
-            //calc = valorCompra + ipi + icms + lucro;
         break;
 
         case 2:
             ipi = (valorCompra * 0.12);
             icms = ( (valorCompra + ipi) * 0.15 );
             lucro = ( valorCompra * 0.25) * 0.05;
-            //calc = valorCompra + ipi + icms + lucro;
         break;
 
         case 3:
             ipi = (valorCompra * 0.15);
             icms = ( (valorCompra + ipi) * 0.18 );
             lucro = ( valorCompra * 0.2) * 0.05;
-            //calc = valorCompra + ipi + icms + lucro;
         break;
 
         case 4:
             ipi = (valorCompra * 0.2);
             icms = ( (valorCompra + ipi) * 0.12 );
             lucro = ( valorCompra * 0.25) * 0.05;
-            //calc = valorCompra + ipi + icms + lucro;
         break;
 
         case 5:
             ipi = (valorCompra * 0.25);
             icms = ( (valorCompra + ipi) * 0.15 );
             lucro = ( valorCompra * 0.2) * 0.05;
-            //calc = valorCompra + ipi + icms + lucro;
         break;
 
         case 6:
             ipi = (valorCompra * 0.3);
             icms = ( (valorCompra + ipi) * 0.18 );
             lucro = ( valorCompra * 0.25) * 0.05;
-            //calc = valorCompra + ipi + icms + lucro;
         break;
     }
 
